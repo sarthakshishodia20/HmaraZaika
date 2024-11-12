@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaika Restaurent Offers for me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <% layout("/layouts/boilerplate") %>
+    <div class="offer-section">
+      <div class="offer-heading">
+        <h1>Restaurants with great offers near me</h1>
+      </div>
+      <div class="filter-container">
+        <button class="filter-button active">
+          <span class="filter-icon">1</span>
+          Filter
+        </button>
+        <button class="filter-button">
+          Sort By <span class="dropdown-icon">▼</span>
+        </button>
+        <button class="filter-button removable">
+          Offers <span class="remove-icon">×</span>
+        </button>
+        <button class="filter-button">Fast Delivery</button>
+        <button class="filter-button">New on Zaika Junction</button>
+        <button class="filter-button">Ratings 4.0+</button>
+        <button class="filter-button">Pure Veg</button>
+        <button class="filter-button">Rs. 300–Rs. 600</button>
+        <button class="filter-button">Less than Rs. 300</button>
+      </div>
+
+      <div class="offer-content">
+        <div class="card-one">
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/17/9318ae22-5fa2-4950-9cf1-37920ae76d93_78973.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">50% OFF UPTO ₹90</h5>
+              <p class="card-text"><b>Pizza Hut</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/34bdc0b9-123a-44a8-b07a-12055c8ba41f_73011.JPG"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ITEMS AT ₹179</h5>
+              <p class="card-text"><b>KFC</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.3 . 15-20 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/17/f270d9cd-cfb8-46aa-b894-aff50b655b18_94209.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">₹125 OFF ABOVE ₹1199</h5>
+              <p class="card-text"><b>Domino's Pizza</b> <br>
+                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/14/2568fda1-0428-4673-83b8-e712646fdfdd_807972.JPG"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">20% OFF</h5>
+              <p class="card-text"><b>Theobroma</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.5 . 20-25 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/16/663d908b-e5d8-45ca-ad44-104e91ad0f63_365574.jpg"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">50% OFF UPTO ₹90</h5>
+              <p class="card-text"><b>LunchBox - Meals and Thalis</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.5 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/rx6kpst6wxyw9vvj7wo8"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">₹125 OFF ABOVE ₹349</h5>
+              <p class="card-text"><b>Walk in Woods</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.3 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/0a59d45ca92d85e5f63f5bc79f3dbb33"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">60% OFF UPTO ₹120</h5>
+              <p class="card-text"><b>Punjabi Angithi(Delhi Wale)</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.4 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vozwrqdkvfcfutehx4ld"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">₹175 OFF ABOVE ₹449</h5>
+              <p class="card-text"><b>Handi Punjab KI</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.4 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/jkkhgvwcjvpfheq8ftbv"
+              class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">50% OFF UPTO ₹100</h5>
+              <p class="card-text"><b>Rajdhani Chicken Point</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.2 . 20-25 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/14/59a064c7-12ef-449b-84da-c0cb8e75a4ba_253768.JPG"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">10% OFF ABOVE ₹2000</h5>
+              <p class="card-text"><b>McDonald's</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.5 . 20-25 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/311282ca8bb87539502527657bd7bcf0"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">40% OFF UPTO ₹80</h5>
+              <p class="card-text"><b>Anandam Express</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.5 . 15-20 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/uj68ybtfwbydewraxzhm"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">50% OFF UPTO ₹100</h5>
+              <p class="card-text"><b>Gaylord Express</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                3.8 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/a9e9da596e7e738dc02f18a9b3c5146b"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">₹100 OFF ABOVE ₹249</h5>
+              <p class="card-text"><b>Bobby Punjabi Kitchen</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.5 . 20-25 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/19/6c895c53-2846-46aa-8fc8-27ef89a591af_952011.jpg"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">60% OFF UPTO ₹120</h5>
+              <p class="card-text"><b>Dilli Dine</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                3.3 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/deabin3rt4mbtcitgopv"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">100 OFF ABOVE ₹349</h5>
+              <p class="card-text"><b>Murthal Paranthawala</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.2 . 25-30 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/gkeymduioynruheoqhlq"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">60% OFF UPTO ₹120</h5>
+              <p class="card-text"><b>Chilli'Z Restro</b> <br>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" role="img" aria-hidden="true"
+                  strokecolor="rgba(2, 6, 12, 0.92)" fillcolor="rgba(2, 6, 12, 0.92)">
+                  <circle cx="10" cy="10" r="9" fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"></circle>
+                  <path
+                    d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                    fill="white"></path>
+                  <defs>
+                    <linearGradient id="StoreRating20_svg__paint0_linear_32982_71567" x1="10" y1="1" x2="10" y2="19"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#21973B"></stop>
+                      <stop offset="1" stop-color="#128540"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                4.3 . 30-35 mins
+              </p>
+              <a href="#" class="btn btn-danger">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

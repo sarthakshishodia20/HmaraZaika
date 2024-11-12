@@ -1,0 +1,12 @@
+<h1>Order Details</h1>
+<p>Order ID: <%= order._id %></p>
+<p>Status: <%= order.status %></p>
+<p>Delivery Status: <%= order.deliveryStatus %></p>
+<h2>Items</h2>
+<ul>
+    <% order.items.forEach(item => { %>
+        <li>
+            <%= item.food.name %> (x<%= item.quantity %>) - <%= item.totalPrice %> INR
+        </li>
+    <% }) %>
+</ul>

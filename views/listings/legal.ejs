@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+<body style="background: linear-gradient(to right,#ede2ab,white,#ede2ab);">
+    <% layout("/layouts/boilerplate") %> 
+<div class="container">
+    <header class="header">
+        <h1>Help & Support</h1>
+        <p>Let's take a step ahead and help you better.</p>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+            <ul>
+                <li onclick="window.location.href='ii.html';" style="cursor:pointer;">Partner Onboarding</li>
+                <li class="active" onclick="window.location.href='legal.html';" style="cursor:pointer;">Legal</li>
+                <li onclick="window.location.href='FAQS.html';" style="cursor:pointer;">FAQS</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2 style="color: black; font-weight: bold;">Legal</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">Terms</button>
+                <div class="faq-answer">
+                    <p>Please read these Terms of Use carefully before you download, install or use the Services. If you do not agree to these Terms of Use, you may not install, download or use the Services. By installing, downloading or using the Services, you signify your acceptance to the Terms of Use and Privacy Policy (being hereby incorporated by reference herein) which takes effect on the date on which you download, install or use the Services, and create a legally binding arrangement to abide by the same.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Privacy Policy</button>
+                <div class="faq-answer">
+                    <p>We ("Zaika Zunction") are fully committed to respecting your privacy and shall ensure that your personal information is safe with us. This privacy policy sets out the information practices of www.swiggy.com ("Website") including the type of information collected, how the information is used, and with whom it is shared.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Cancel Order</button>
+                <div class="faq-answer">
+                    <p>You can cancel the order within 10 minutes of placing the order.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // FAQ Toggle Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                // Toggle the answer visibility
+                answer.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

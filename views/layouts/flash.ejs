@@ -1,0 +1,26 @@
+<% if (success && success.length) { %>
+    <div class="alert alert-dark alert-dismissible fade show d-flex justify-content-between align-items-center mt-3 custom-alert" role="alert">
+        <span class="alert-text"><%= success %></span>
+    </div>
+<% } %>
+
+<style>
+    .custom-alert {
+        width: 70%; 
+        margin: 0 auto;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.2rem; 
+        padding-right: 30px;
+        transition: background-color 0.3s ease;
+    }
+    .alert-text {
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+<% if (error && error.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-between align-items-center mt-3 custom-alert" role="alert">
+        <span class="alert-text"><%=error%></span>
+    </div>
+<% } %>

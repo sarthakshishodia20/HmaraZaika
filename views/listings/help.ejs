@@ -1,0 +1,358 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body style="background: linear-gradient(to right,#efc75a,#fffffc, #dee8f8);">
+    <% layout("/layouts/boilerplate") %>
+<div class="container">
+    <header class="header">
+        <h1>Help & Support</h1>
+        <p>Let's take a step ahead and help you better.</p>
+    </header>
+
+    <div class="content">
+        <div class="sidebar">
+            <ul>
+                <li class="active" onclick="window.location.href='/listings';" style="cursor:pointer;">Partner Onboarding</li>
+                <li onclick="window.location.href='listings/legal';" style="cursor:pointer;">Legal</li>
+                <li onclick="window.location.href='listings/FAQS';" style="cursor:pointer;">FAQS</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h2>Partner Onboarding</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">I want to partner my restaurant with Zaika Zunction</button>
+                <div class="faq-answer">
+                    <p>Contact Us By Email</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What are the mandatory documents needed to list my restaurant on Zaika Zunction?</button>
+                <div class="faq-answer">
+                    <p>Copies of the below documents are mandatory:</p>
+                    <ul>
+                        <li>FSSAI Licence OR FSSAI Acknowledgement</li>
+                        <li>Pan Card</li>
+                        <li>GSTIN Certificate</li>
+                        <li>Cancelled Cheque OR bank Passbook</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">After I submit all documents, how long will it take for my restaurant to go live on Zaika Zunction?</button>
+                <div class="faq-answer">
+                    <p>After all mandatory documents have been received and verified, it takes up to 7-10 working days for the onboarding to be completed and make your restaurant live on the platform.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is this one-time Onboarding fee? Do I have to pay for it while registering?</button>
+                <div class="faq-answer">
+                    <p>This is a one-time fee charged towards the system & admin costs incurred during the onboarding process. It is deducted from the weekly payouts after you start receiving orders from Zaika Zunction.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // FAQ Toggle Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach((question) => {
+            question.addEventListener('click', function() {
+                // Toggle the active class
+                this.classList.toggle('active');
+
+                // Toggle the display of the next sibling (faq-answer)
+                const answer = this.nextElementSibling;
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    });
+</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf3e0; /* Light classy background */
+        }
+
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #b8860b; /* Dark golden color */
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .content {
+            margin-top: 40px;
+        }
+
+        .main-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h2 {
+            color: #b8860b;
+            margin-bottom: 20px;
+        }
+
+        .faq-section {
+            margin-bottom: 30px;
+        }
+
+        .faq-section h3 {
+            cursor: pointer;
+            background-color: #b8860b;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-section h3:hover {
+            background-color: #8b6508;
+        }
+
+        .faq-section .faq-items {
+            display: none;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 18px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #444;
+        }
+
+        .faq-answer {
+            display: none;
+            background-color: #f5f5f5;
+            margin-top: 10px;
+            padding: 15px;
+            font-size: 16px;
+            border-left: 4px solid #b8860b;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .advanced-ui {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .advanced-ui button {
+            background-color: #b8860b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .advanced-ui button:hover {
+            background-color: #8b6508;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Help & Support</h1>
+        <p>We're here to assist you in the best way possible.</p>
+    </header>
+
+    <div class="content">
+        <div class="main-content">
+            <h2><b>Help & Support Information</b></h2>
+            <div class="faq-section">
+                <h3 id="partner-onboarding">Partner Onboarding</h3>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <button class="faq-question">I want to partner my restaurant with Zaika Zunction</button>
+                        <div class="faq-answer">
+                            <p>Contact us via email for more details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What documents are needed to list my restaurant on Zaika Zunction?</button>
+                        <div class="faq-answer">
+                            <p>Mandatory documents include:</p>
+                            <ul>
+                                <li>FSSAI Licence or FSSAI Acknowledgment</li>
+                                <li>PAN Card</li>
+                                <li>GSTIN Certificate</li>
+                                <li>Cancelled Cheque or Bank Passbook</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How long will it take for my restaurant to go live after submitting documents?</button>
+                        <div class="faq-answer">
+                            <p>It takes 7-10 working days after document verification for your restaurant to go live.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What is the onboarding fee? Is it paid during registration?</button>
+                        <div class="faq-answer">
+                            <p>The onboarding fee covers system & admin costs and is deducted from weekly payouts after receiving orders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Section -->
+            <div class="faq-section">
+                <h3 id="legal">Legal</h3>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <button class="faq-question">Terms & Conditions</button>
+                        <div class="faq-answer">
+                            <p>By using the services, you agree to our Terms of Use and Privacy Policy, which become binding upon installation and use of the platform.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Privacy Policy</button>
+                        <div class="faq-answer">
+                            <p>Your privacy is important to us. Our policy explains how we collect, use, and share your information.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Cancel Order</button>
+                        <div class="faq-answer">
+                            <p>You can cancel the order within 10 minutes of placing the order.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-section"><h3 id="FAQS">FAQS</h3>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <button class="faq-question">How to place an order?</button>
+                        <div class="faq-answer">
+                            <p>To place an order, simply browse through the menu, select your items, and proceed to checkout. You can pay online or choose cash on delivery.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">What are the payment options available?</button>
+                        <div class="faq-answer">
+                            <p>We accept credit/debit cards, UPI, mobile wallets, and cash on delivery.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">How can I contact customer support?</button>
+                        <div class="faq-answer">
+                            <p>You can reach our customer support via the contact form on the "Contact Us" page or call us directly at our helpline.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Can I change the address / number?</button>
+                        <div class="faq-answer">
+                            <p> Any major change in delivery address is not possible after you have placed an order with us. However, slight modifications like changing the flat number, street name, landmark etc. are allowed. If you have received delivery executive details, you can directly call him, else you could contact our customer service team.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question"> Do you support bulk orders?</button>
+                         <div class="faq-answer">
+                            <p>In order to provide all customers with a great selection and to ensure on time delivery of your meal, we reserve the right to limit the quantities depending on supply.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">How long do you take to deliver?</button>
+                        <div class="faq-answer">
+                            <p> Standard delivery times vary by the location selected and prevailing conditions. Once you select your location, an estimated delivery time is mentioned for each restaurant.</p>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.faq-section h3');
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            sections.forEach((section) => {
+                section.addEventListener('click', function () {
+                    const faqItems = this.nextElementSibling;
+                    faqItems.style.display = faqItems.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+            faqQuestions.forEach((question) => {
+                question.addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

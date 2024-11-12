@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    body {
+        background:linear-gradient(to right,rgb(99, 160, 250),rgb(204, 226, 245),#dee8f8);
+    }
+    .form-box {
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.3s ease;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .form-box:hover {
+        box-shadow: 10px 82px 94px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+    .form-group label {
+        font-size: 1.2rem;
+    }
+    span {
+        color: rgb(245, 77, 16);
+    }
+
+    .form-control {
+        font-size: 1.1rem;
+    }
+    .btn {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .invalid-feedback {
+        display: none;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center mb-4" style="font-weight: bold; font-size: 2.5rem;">Login to <span>Zaika Zunction</span></h2>
+            <div class="form-box">
+                <form action="/login" method="POST" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="username" style="font-weight: bold;">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required placeholder="Enter your username">
+                        <div class="invalid-feedback">Please enter a valid username.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" style="font-weight: bold;">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password" minlength="6">
+                        <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" style="padding: 15px 0;">Login</button>
+                </form>
+            </div>
+            <% if (locals.error) { %>
+                <div class="alert alert-danger mt-3"><%= locals.error %></div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+    })();
+</script>

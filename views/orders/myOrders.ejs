@@ -1,0 +1,12 @@
+<h1>Your Orders</h1>
+<% if (orders.length === 0) { %>
+    <p>No orders yet.</p>
+<% } else { %>
+    <ul>
+        <% orders.forEach(order => { %>
+            <li>
+                <a href="/orders/<%= order._id %>">Order #<%= order._id %> - <%= order.status %> - <%= order.deliveryStatus %></a>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>

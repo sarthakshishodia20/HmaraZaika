@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body style="background: linear-gradient(135deg, #f8c6e4, #a7b0f7);">
+    
+    <% layout("/layouts/boilerplate") %>
+    <div class="image"
+        style="height: 400px; width: 100%; background: url('/uploads/contactImg.jpg') no-repeat center center; background-size: cover;">
+    </div>
+    <p class="text-center py-5 fs-5 fw-bold">We are always happy to hear from our customers!
+    </p>
+    <form class="form-box bg-white py-3 px-5 mx-auto rounded" style="max-width: 600px;"
+        action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f90314ef-988b-4de8-92e8-732ea3ab9f51">
+        <h3 class="text-secondary fw-bold mb-4">GET IN TOUCH</h3>
+        <div class="form-group">
+            <input name="name" id="name" placeholder="Your name" class="form-control bg-light my-4" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control bg-light my-4" name="email" id="email" placeholder="Your Email-id" type="text">
+        </div>
+        <div class="form-group">
+            <textarea name="message" class="form-control bg-light my-4" rows="4"
+                placeholder="How can we help you?"></textarea>
+        </div>
+        <button class="btn btn-primary rounded-pill px-4 py-2" type="submit">Submit</button>
+    </form>
+    <br><br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

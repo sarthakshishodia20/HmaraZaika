@@ -6,7 +6,7 @@
                 <h1 class="text-center my-4"><b>Edit Your Food Item</b></h1>
 
                 <!-- Form for editing a food listing -->
-                <form method="POST" action="/listings/<%= foodListing._id %>?_method=PUT" class="needs-validation" novalidate>
+                <form method="POST" action="/listings/<%= foodListing._id %>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
                     
                     <!-- Name -->
                     <div class="mb-3">
@@ -45,8 +45,8 @@
 
                     <!-- Image Link -->
                     <div class="mb-3">
-                        <label for="image" class="form-label" style="font-size: 20px;">Image Link:</label>
-                        <input type="text" name="foodListing[images]" id="image" value="<%= foodListing.images %>" class="form-control" required>
+                        <label for="image" class="form-label" style="font-size: 20px;">Upload New Image</label>
+                        <input type="file" name="foodListing[images]" id="image" class="form-control" >
                         <div class="invalid-feedback">Please provide a valid image link.</div>
                     </div>
 

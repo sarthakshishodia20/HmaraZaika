@@ -16,8 +16,8 @@ const foodListingSchema = new Schema({
         required: true,
     },
     images: {  // Changed to match the Joi schema and form
-        type: String,
-        required: true,
+        url:String,
+        filename:String,
     },
 
     location: {
@@ -28,7 +28,7 @@ const foodListingSchema = new Schema({
         type: Number,
         required: true,
     },
-title: {   
+    _id: {   
     type: Schema.Types.ObjectId,
   },
     reviews: [
@@ -36,7 +36,23 @@ title: {
             type: Schema.Types.ObjectId,
             ref: 'Review',
         }
-    ]
+    ],
+    owner:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+    },
+    // geoCoding JSON Data
+    geometry:{
+        type:{
+            type:String,
+            enum:['Point'],
+            required:true,
+        },
+        coordinates:{
+            type:[Number],
+            required:true,
+        }
+    }
 });
 
 // Middleware to delete reviews when a listing is deleted

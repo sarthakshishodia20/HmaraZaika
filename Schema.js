@@ -5,7 +5,7 @@ module.exports.FoodListingSchema = Joi.object({
         name: Joi.string().required(),
         price: Joi.number().required(),
         ingredients: Joi.string().required(),
-        images: Joi.string().required(),
+        images: Joi.string().allow("",null),
         location: Joi.string().required(),
         DeliveryCharge: Joi.number().optional() 
     }).required()

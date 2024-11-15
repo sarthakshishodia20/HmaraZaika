@@ -1,3 +1,8 @@
+if(!process.env.NODE_ENV!="production"){
+    require("dotenv").config();
+}
+
+console.log(process.env.secret);
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -110,6 +115,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-app.listen(3030, () => {
+app.listen(9090, () => {
     console.log("Server is running on port 3000");
 });

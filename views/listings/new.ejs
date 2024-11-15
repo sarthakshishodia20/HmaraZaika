@@ -32,7 +32,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1>New Food Item</h1>
-                <form method="POST" action="/listings" class="needs-validation" novalidate>
+                <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name:</label>
                         <input id="name" name="foodListing[name]" placeholder="Enter name" type="text" class="form-control" required>
@@ -77,9 +77,19 @@
                         </div>
                     </div>
                      
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="images" class="form-label">Image Link:</label>
                         <input id="images" name="foodListing[images]" placeholder="Enter Image Link" type="text" class="form-control" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide an image link.
+                        </div>
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="images" class="form-label">Upload Food Image:</label>
+                        <input id="images" name="foodListing[image]"  type="file" class="form-control" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>

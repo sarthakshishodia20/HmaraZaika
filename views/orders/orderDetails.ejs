@@ -1,12 +1,53 @@
-<h1>Order Details</h1>
-<p>Order ID: <%= order._id %></p>
-<p>Status: <%= order.status %></p>
-<p>Delivery Status: <%= order.deliveryStatus %></p>
-<h2>Items</h2>
-<ul>
-    <% order.items.forEach(item => { %>
-        <li>
-            <%= item.food.name %> (x<%= item.quantity %>) - <%= item.totalPrice %> INR
-        </li>
-    <% }) %>
-</ul>
+<% layout("/layouts/boilerplate") %>
+<div class="container my-5">
+    <div class="p-5 rounded border shadow-sm order-details-box">
+        <h1 class="display-5 mb-4"><b>Order Details</b></h1>
+        <p class="fs-4 mb-2"><strong>Order ID:</strong> <%= order._id %></p>
+        <p class="fs-4 mb-2"><strong>Status:</strong> <%= order.status %></p>
+        <p class="fs-4 mb-4"><strong>Delivery Status:</strong> <%= order.deliveryStatus %></p>
+
+        <h2 class="h4 mb-3">Items</h2>
+        <ul class="list-group">
+            <% order.items.forEach(item => { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center fs-5">
+                    <span><%= item.food.name %> (X<%= item.quantity %>)</span>
+                    <span><%= item.totalPrice %> INR</span>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(to right, rgb(141, 189, 240), black);
+    }
+
+    .order-details-box {
+        background: linear-gradient(to left, rgb(141, 189, 240), rgb(222, 222, 222));
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+        border: 2px solid white;
+        border-radius: 30px;
+        transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+    }
+
+    .order-details-box:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    }
+
+    h1 {
+        font-size: 36px; /* Increased font size for the main title */
+    }
+
+    .fs-4 {
+        font-size: 1.5rem; /* Increased font size for order details */
+    }
+
+    .h4 {
+        font-size: 1.75rem; /* Increased font size for items header */
+    }
+
+    .fs-5 {
+        font-size: 1.25rem; /* Larger font for list items */
+    }
+</style>

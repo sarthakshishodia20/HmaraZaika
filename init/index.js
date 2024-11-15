@@ -19,9 +19,10 @@ async function main(){
 }
 
 const initDB=async()=>{
-    FoodListing.deleteMany({});
-    FoodListing.insertMany(initData.data);
-    console.log("Data was initialised");
 
+    await FoodListing.deleteMany({});
+    initData.data=initData.data.map((obj)=>({...obj,owner:"6734a7a366add91bdefef624"}));
+    await FoodListing.insertMany(initData.data);
+    console.log("Data was initialised");
 }
 initDB();

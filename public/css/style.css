@@ -29,11 +29,30 @@ svg {
 
 
 
+/* Map Styling */
+#map {
+    border:5px solid black;
+    border-radius:20px;
+    box-shadow:20px 15px 17px 5px grey;
+    height: 400px; /* Set the height of the map */
+    width: 100%; /* Make the map take up full width */
+    margin: 0 auto; /* Center the map horizontally */
+    display: block; /* Ensure the map is a block element */
+    margin-right:13rem;
+    margin-bottom:5rem;
+}
 
+.col-8.offset-3 {
+    display: flex;
+    justify-content: center; /* Center the map container */
+    align-items: center; /* Center vertically */
+    padding-top: 20px; /* Add some padding if needed */
+}
 
-
-
-
+.heading-container {
+    text-align: center; /* Align heading in the center */
+    margin-bottom: 20px; /* Add space between the heading and map */
+}
 
 
 /* --------------------------------------------------------------------------------------- */

@@ -1,12 +1,69 @@
-<h1>Your Orders</h1>
-<% if (orders.length === 0) { %>
-    <p>No orders yet.</p>
-<% } else { %>
-    <ul>
-        <% orders.forEach(order => { %>
-            <li>
-                <a href="/orders/<%= order._id %>">Order #<%= order._id %> - <%= order.status %> - <%= order.deliveryStatus %></a>
-            </li>
-        <% }) %>
-    </ul>
-<% } %>
+<% layout("/layouts/boilerplate") %>
+
+<div class="container my-5">
+    <div class="p-5 rounded border shadow-sm order-details-box">
+        <h1 class="text-center display-4 mb-4"><b>Your Orders</b></h1>
+
+        <% if (orders.length === 0) { %>
+            <div class="alert alert-danger text-center noOrders" role="alert">
+                No orders yet.
+            </div>
+        <% } else { %>
+            <ul class="list-group">
+                <% orders.forEach(order => { %>
+                    <li class="list-group-item d-flex justify-content-between align-items-center fs-5">
+                        <a href="/orders/<%= order._id %>" class="text-dark text-decoration-none order-link">
+                            <strong>Order #<%= order._id %></strong> - Status: <span class="badge bg-orange"><%= order.status %></span> - Delivery: <span class="badge bg-white text-dark"><%= order.deliveryStatus %></span>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(to right, rgb(141, 189, 240), black);
+    }
+
+    .order-details-box {
+        background: linear-gradient(to left, rgb(141, 189, 240), rgb(222, 222, 222));
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        border: 2px solid white;
+        border-radius: 30px;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .order-details-box:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        font-size: 36px; 
+    }
+
+    .noOrders {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .bg-orange {
+        background-color: #FFA500;
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .bg-white {
+        background-color: #ffffff;
+        font-size: 1.2rem;
+    }
+
+    .order-link {
+        font-size: 1.25rem;
+    }
+
+    .fs-5 {
+        font-size: 1.25rem;
+    }
+</style>

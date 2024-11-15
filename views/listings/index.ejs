@@ -60,7 +60,7 @@
                     <li>
                         <a href="/listings/<%= listing._id %>">
                             <div class="card" style="width: 19rem;">
-                                <img class="card-img-top" src="<%=listing.images%>" alt="FoodImage">
+                                <img class="card-img-top" src="<%=listing.images.url%>" alt="FoodImage">
                                 <div class="card-body">
 
                                     <p class="card-text"><b>
@@ -68,7 +68,7 @@
                                         </b>
                                     </p>
                                     <p class="card-text" id="order">
-<form action="/orders/<%= listing.title %>/order" method="POST">
+<form action="/orders/<%= listing._id %>/order" method="POST">
     <button type="submit">Order Now</button>
 </form>
                                     </p>

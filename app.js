@@ -115,6 +115,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-app.listen(9090, () => {
+app.listen(3333, () => {
     console.log("Server is running on port 3000");
 });

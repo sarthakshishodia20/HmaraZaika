@@ -92,7 +92,7 @@ module.exports.createNewFoodItem=async (req, res) => {
     newFoodListing.images={url,filename};
     newFoodListing.geometry=response.body.features[0].geometry;
     let savedListing=await newFoodListing.save();
-    console.log(savedListing);
+    // console.log(savedListing);
     req.flash("success", "New Item Created");
     res.redirect("/listings");
 };

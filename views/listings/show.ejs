@@ -34,10 +34,9 @@
 </head>
 <% layout("/layouts/boilerplate") %>
 <script>
-    let mapToken="<%=process.env.MAP_TOKEN%>"
-    console.log(mapToken);
+    let mapToken="<%=process.env.MAP_TOKEN%>";
     const coordinates=<%-JSON.stringify(currentFoodListing.geometry.coordinates)%>;
-  </script>
+</script>
 <body style="background-color: #bfd54e6c;">
     <div class="container">
         <h1>Food Item Details</h1>

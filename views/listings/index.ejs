@@ -1,18 +1,27 @@
 <% layout("/layouts/boilerplate") %>
 
-
     <head>
         <style>
             body {
                 font-family: 'Times New Roman', Times, serif;
-                /* background-color: #ffebc792; */
+                background-color: #e8ffef53;
                 margin: 0;
                 padding: 0;
             }
 
-            
+            #orders{
+                /* background-color: red; */
+
+                font-size: 20px;
+                border-radius: 20px;
+                font-weight: bold;
+                border:4px double green;
+            }
+            #orders:hover{
+                border:5px solid green;
+            }
         </style>
-    </head> 
+    </head>
 
     <body>
         <h3 id="zaika-slogan">"Zaika Junction: Har Thaali Mein Khushiyon Ki Mithaas!"</h3>
@@ -67,10 +76,10 @@
                                             <%=listing.name%>
                                         </b>
                                     </p>
-                                    <p class="card-text" id="order">
-<form action="/orders/<%= listing._id %>/order" method="POST">
-    <button type="submit">Order Now</button>
-</form>
+                                    <!-- <p class="card-text" id="order"> -->
+                                    <form action="/orders/<%= listing._id %>/order" method="POST">
+                                        <button id="orders" type="submit">Order Now</button>
+                                    </form>
                                     </p>
                                 </div>
                             </div>
@@ -140,13 +149,12 @@
                     <ul class="restaurants">
                         <li>Best Restaurant in Chandigrah</li>
                         <li>Best Restaurant in Delhi</li>
-                            <p>
-                                <button id="prim"class="btn btn-primary" type="button"data-toggle="collapse"
-                                    data-target="#collapseExample" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                    Show More
-                                </button>
-                            </p>
+                        <p>
+                            <button id="prim" class="btn btn-primary" type="button" data-toggle="collapse"
+                                data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                Show More
+                            </button>
+                        </p>
                     </ul>
                 </div>
 
@@ -187,179 +195,178 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <div class="container">
-                <br>
-                <h1 style="font-weight: bold;">Best Cuisines Near Me</h1>
-                <br>
-                <div class="row">
-                    <div class="col-3">
-                        <ul class="restaurants">
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Korean Restaurants near Me</li>
-                            <li>Indian Restaurants near Me</li>
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <ul class="restaurants">
-    
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Chinese Restaurants near Me</li>
-    
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <ul class="restaurants">
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Chinese Restaurants near Me</li>
-                        </ul>
-                    </div>
-                    <div class="col-3">
-                        <ul class="restaurants">
-                            <li>Chinese Restaurants near Me</li>
-                            <li>Chinese Restaurants near Me</li>
-                                <p>
-                                    <button class="btn btn-success" id="succ" type="button" data-toggle="collapse"
-                                        data-target="#collapseExamples" aria-expanded="false"
-                                        aria-controls="collapseExample">
-                                        Show More
-                                    </button>
-                                </p>
-                            
-                        </ul>
-                    </div>
-    
-                    <div class="collapse" id="collapseExamples">
-                        <div class="cards">
-                            <div class="row">
-                                <div class="col-3">
-                                    <ul class="restaurants">
-                                        <li>Best Restaurant in Bangalore</li>
-                                        <li>Best Restaurant in Hyderabad</li>
-                                        <li>Best Restaurant in Ahemedabad</li>
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="restaurants">
-    
-                                        <li>Best Restaurant in Kochi</li>
-                                        <li>Best Restaurant in Haryana</li>
-                                        <li>Best Restaurant in Calicut</li>
-    
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="restaurants">
-                                        <li>Best Restaurant in Pune</li>
-                                        <li>Best Restaurant in Chennai</li>
-                                        <li>Best Restaurant in Nagpur</li>
-                                    </ul>
-                                </div>
-                                <div class="col-3">
-                                    <ul class="restaurants">
-                                        <li>Best Restaurant in Chandigrah</li>
-                                        <li>Best Restaurant in Delhi</li>
-                                        <li>Best Restaurant in Gurgaon</li>
-                                    </ul>
-                                </div>
+        <div class="container">
+            <br>
+            <h1 style="font-weight: bold;">Best Cuisines Near Me</h1>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <ul class="restaurants">
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Korean Restaurants near Me</li>
+                        <li>Indian Restaurants near Me</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="restaurants">
+
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Chinese Restaurants near Me</li>
+
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="restaurants">
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Chinese Restaurants near Me</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="restaurants">
+                        <li>Chinese Restaurants near Me</li>
+                        <li>Chinese Restaurants near Me</li>
+                        <p>
+                            <button class="btn btn-success" id="succ" type="button" data-toggle="collapse"
+                                data-target="#collapseExamples" aria-expanded="false" aria-controls="collapseExample">
+                                Show More
+                            </button>
+                        </p>
+
+                    </ul>
+                </div>
+
+                <div class="collapse" id="collapseExamples">
+                    <div class="cards">
+                        <div class="row">
+                            <div class="col-3">
+                                <ul class="restaurants">
+                                    <li>Best Restaurant in Bangalore</li>
+                                    <li>Best Restaurant in Hyderabad</li>
+                                    <li>Best Restaurant in Ahemedabad</li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="restaurants">
+
+                                    <li>Best Restaurant in Kochi</li>
+                                    <li>Best Restaurant in Haryana</li>
+                                    <li>Best Restaurant in Calicut</li>
+
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="restaurants">
+                                    <li>Best Restaurant in Pune</li>
+                                    <li>Best Restaurant in Chennai</li>
+                                    <li>Best Restaurant in Nagpur</li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="restaurants">
+                                    <li>Best Restaurant in Chandigrah</li>
+                                    <li>Best Restaurant in Delhi</li>
+                                    <li>Best Restaurant in Gurgaon</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                </div>
-    
-            <script>
-                const sloganText = document.getElementById('zaika-slogan').innerText;
-                const words = sloganText.split(' ');
+            </div>
+        </div>
 
-                document.getElementById('zaika-slogan').innerHTML = '';
-                words.forEach((word, index) => {
-                    const span = document.createElement('span');
-                    span.innerText = word + ' ';
-                    span.classList.add(index % 2 === 0 ? 'alt-color-1' : 'alt-color-2');
-                    document.getElementById('zaika-slogan').appendChild(span);
-                });
+        <script>
+            const sloganText = document.getElementById('zaika-slogan').innerText;
+            const words = sloganText.split(' ');
 
-                const carousel = document.querySelector('#carouselExampleIndicators');
-                let isPaused = false;
-                let delay = 2000;
-                let interval = 3000;
+            document.getElementById('zaika-slogan').innerHTML = '';
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.innerText = word + ' ';
+                span.classList.add(index % 2 === 0 ? 'alt-color-1' : 'alt-color-2');
+                document.getElementById('zaika-slogan').appendChild(span);
+            });
 
-                function startCarousel() {
-                    $(carousel).carousel('cycle');
-                }
+            const carousel = document.querySelector('#carouselExampleIndicators');
+            let isPaused = false;
+            let delay = 2000;
+            let interval = 3000;
 
-                function pauseAndDelay() {
-                    $(carousel).carousel('pause');
-                    setTimeout(() => {
-                        startCarousel();
-                    }, delay);
-                }
+            function startCarousel() {
+                $(carousel).carousel('cycle');
+            }
 
-                carousel.addEventListener('mouseenter', () => {
-                    isPaused = true;
-                    $(carousel).carousel('pause');
-                });
-
-                carousel.addEventListener('mouseleave', () => {
-                    isPaused = false;
+            function pauseAndDelay() {
+                $(carousel).carousel('pause');
+                setTimeout(() => {
                     startCarousel();
-                });
+                }, delay);
+            }
 
-                $(carousel).carousel({ interval: interval });
+            carousel.addEventListener('mouseenter', () => {
+                isPaused = true;
+                $(carousel).carousel('pause');
+            });
 
-                $(carousel).on('slid.bs.carousel', () => {
-                    if (!isPaused) {
-                        pauseAndDelay();
+            carousel.addEventListener('mouseleave', () => {
+                isPaused = false;
+                startCarousel();
+            });
+
+            $(carousel).carousel({ interval: interval });
+
+            $(carousel).on('slid.bs.carousel', () => {
+                if (!isPaused) {
+                    pauseAndDelay();
+                }
+            });
+            startCarousel();
+            let lastScrollY = window.scrollY;
+
+            function updateCardAnimations() {
+                const cards = document.querySelectorAll('.card');
+                const windowHeight = window.innerHeight;
+                const currentScrollY = window.scrollY;
+
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const cardTop = rect.top;
+                    const cardBottom = rect.bottom;
+
+                    if (cardTop < windowHeight && cardBottom > 0) {
+                        // The card is within the viewport
+                        if (currentScrollY < lastScrollY) {
+                            // Scrolling up: Increase the size
+                            card.classList.add('scale-up');
+                            card.classList.remove('scale-down');
+                        } else {
+                            // Scrolling down: Decrease the size
+                            card.classList.add('scale-down');
+                            card.classList.remove('scale-up');
+                        }
+                    } else {
+                        // Remove scaling when the card is out of viewport
+                        card.classList.remove('scale-up', 'scale-down');
                     }
                 });
-                startCarousel();
-                let lastScrollY = window.scrollY;
 
-                function updateCardAnimations() {
-                    const cards = document.querySelectorAll('.card');
-                    const windowHeight = window.innerHeight;
-                    const currentScrollY = window.scrollY;
+                lastScrollY = currentScrollY; // Update last scroll position
+            }
 
-                    cards.forEach(card => {
-                        const rect = card.getBoundingClientRect();
-                        const cardTop = rect.top;
-                        const cardBottom = rect.bottom;
+            // Initialize the animation
+            updateCardAnimations();
 
-                        if (cardTop < windowHeight && cardBottom > 0) {
-                            // The card is within the viewport
-                            if (currentScrollY < lastScrollY) {
-                                // Scrolling up: Increase the size
-                                card.classList.add('scale-up');
-                                card.classList.remove('scale-down');
-                            } else {
-                                // Scrolling down: Decrease the size
-                                card.classList.add('scale-down');
-                                card.classList.remove('scale-up');
-                            }
-                        } else {
-                            // Remove scaling when the card is out of viewport
-                            card.classList.remove('scale-up', 'scale-down');
-                        }
-                    });
+            // Update on scroll
+            document.addEventListener('scroll', updateCardAnimations);
 
-                    lastScrollY = currentScrollY; // Update last scroll position
-                }
+            // Update on resize
+            window.addEventListener('resize', updateCardAnimations);
 
-                // Initialize the animation
-                updateCardAnimations();
+            // Update on page load
+            window.addEventListener('load', updateCardAnimations);
 
-                // Update on scroll
-                document.addEventListener('scroll', updateCardAnimations);
-
-                // Update on resize
-                window.addEventListener('resize', updateCardAnimations);
-
-                // Update on page load
-                window.addEventListener('load', updateCardAnimations);
-
-            </script>
+        </script>
     </body>

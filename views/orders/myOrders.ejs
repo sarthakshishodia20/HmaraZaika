@@ -15,6 +15,9 @@
                         <a href="/orders/<%= order._id %>" class="text-dark text-decoration-none order-link">
                             <strong>Order #<%= order._id %></strong> - Status: <span class="badge bg-orange"><%= order.status %></span> - Delivery: <span class="badge bg-white text-dark"><%= order.deliveryStatus %></span>
                         </a>
+                        <form action="/orders/<%= order._id %>/delete" method="POST" style="margin: 0;">
+                            <button type="submit" class="btn btn-primary"><b>Cancel Order</b></button>
+                        </form>
                     </li>
                 <% }) %>
             </ul>

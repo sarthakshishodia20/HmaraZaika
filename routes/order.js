@@ -9,4 +9,6 @@ router.get("/myOrders",orderController.myOrders);
 
 router.get("/:orderId",orderController.getOrderDetails);
 
+router.post("/:orderId/delete",orderController.deleteOrder);
+
 module.exports = router;

@@ -10,7 +10,6 @@
         <ul class="list-group">
             <% order.items.forEach(item => { %>
                 <li class="list-group-item d-flex justify-content-between align-items-center fs-5">
-                    <span><%= item.food.name %> (X<%= item.quantity %>)</span>
                     <span><%= item.totalPrice %> INR</span>
                 </li>
             <% }) %>

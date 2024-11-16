@@ -41,3 +41,35 @@ module.exports.getOrderDetails=async (req, res) => {
     res.render("orders/orderDetails", { order });
 }
 
+
+module.exports.deleteOrder = async (req, res) => {
+    if (!req.isAuthenticated()) {
+        req.flash("error", "Please log in to delete an order.");
+        return res.redirect("/login");
+    }
+
+    const { orderId } = req.params;
+
+    try {
+        const order = await Order.findById(orderId);
+
+        if (!order) {
+            req.flash("error", "Order not found.");
+            return res.redirect("/orders/myOrders");
+        }
+
+        if (order.user.toString() !== req.user._id.toString()) {
+            req.flash("error", "You can only delete your own orders.");
+            return res.redirect("/orders/myOrders");
+        }
+
+        await Order.findByIdAndDelete(orderId);
+
+        req.flash("success", "Order deleted successfully!");
+        res.redirect("/orders/myOrders");
+    } catch (err) {
+        console.error("Error deleting order:", err);
+        req.flash("error", "Something went wrong while deleting the order.");
+        res.redirect("/orders/myOrders");
+    }
+}

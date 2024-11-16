@@ -11,7 +11,7 @@ let sampleListing = [
     },
     geometry: {
       type: "Point",
-      coordinates: [77.2386, 28.6139] // New Delhi coordinates (approximate)
+      coordinates: [77.2386,28.6139] // New Delhi coordinates (approximate)
     }
   },
   {
@@ -26,7 +26,8 @@ let sampleListing = [
     },
     geometry: {
       type: "Point",
-      coordinates: [77.2386, 28.6139] // New Delhi coordinates (approximate)
+      coordinates: [77.2386,28.6139] // New Delhi coordinates (approximate)
+
     }
   },
   {
@@ -41,7 +42,8 @@ let sampleListing = [
     },
     geometry: {
       type: "Point",
-      coordinates: [77.2386, 28.6139] // New Delhi coordinates (approximate)
+      coordinates: [77.2386,28.6139] // New Delhi coordinates (approximate)
+
     }
   },
   {
@@ -56,7 +58,8 @@ let sampleListing = [
     },
     geometry: {
       type: "Point",
-      coordinates: [77.2386, 28.6139] // New Delhi coordinates (approximate)
+      coordinates: [77.2386,28.6139] // New Delhi coordinates (approximate)
+
     }
   },
   {
@@ -86,7 +89,8 @@ let sampleListing = [
     },
     geometry: {
       type: "Point",
-      coordinates: [77.2386, 28.6139] // New Delhi coordinates (approximate)
+      coordinates: [77.2386,28.6139] // New Delhi coordinates (approximate)
+
     }
   },
   {

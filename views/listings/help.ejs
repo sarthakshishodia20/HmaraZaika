@@ -92,6 +92,9 @@
     <title><%= title %></title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        *{
+            margin: 0;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -119,6 +122,10 @@
 
         .content {
             margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .main-content {
@@ -126,6 +133,7 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .main-content h2 {

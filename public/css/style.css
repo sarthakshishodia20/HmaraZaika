@@ -91,6 +91,7 @@ svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .intro-content>h1 {
@@ -125,8 +126,8 @@ svg {
 }
 
 .intro-img-container {
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     border: 10px white solid;
     border-radius: 20px;
 }
@@ -195,10 +196,10 @@ svg {
     background: linear-gradient(to left, rgb(99, 160, 250), rgb(204, 226, 245), #dee8f8);
     height: 500px;
     display: grid;
-    padding: 5% 5%;
+    padding: 5% 4%;
     border-radius: 20px;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, 22%);
+    grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
 }
 
@@ -229,6 +230,9 @@ svg {
     margin-top: 10%;
     height: 20%;
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .feature>p {
@@ -248,10 +252,11 @@ svg {
     margin-bottom: 1rem;
     border-radius: 20px;
     padding-bottom: 1rem;
+    
     height: inherit;
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    gap: 5%;
 }
 
 .container-4:hover {
@@ -260,12 +265,16 @@ svg {
 }
 
 .working-process {
-    width: 40%;
+    text-align: right;
+    padding-left: 2rem;
+    width: 45%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
+.working-process>h1{
+    text-align: right;
+}
 .woking-image {
     width: 50%;
     display: flex;
@@ -274,8 +283,8 @@ svg {
     align-items: center;
 }
 
-.woking-image>img {
-    width: 110%;
+.working-image>img {
+    width: 105%;
 }
 
 .container-5 {
@@ -333,10 +342,14 @@ svg {
 }
 
 .members-name {
+    animation: none;
+    border: white;
     height: 20%;
     font-size: 30px;
-    padding-top: 5%;
+    display: flex;
+    align-items: center;
     font-family: 'Times New Roman', Times, serif;
+
 }
 
 .feature:hover{

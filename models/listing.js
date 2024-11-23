@@ -28,9 +28,6 @@ const foodListingSchema = new Schema({
         type: Number,
         required: true,
     },
-    _id: {   
-    type: Schema.Types.ObjectId,
-  },
     reviews: [
         {
             type: Schema.Types.ObjectId,

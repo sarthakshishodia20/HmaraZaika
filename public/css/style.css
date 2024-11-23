@@ -6,6 +6,7 @@ nav a{
 
 .card{
     height: 100px;
+    margin-left: 5rem;
 }
 
 footer {
@@ -23,11 +24,6 @@ svg {
     margin: 0;
     position: relative;
 }
-
-
-
-
-
 
 /* Map Styling */
 #map {

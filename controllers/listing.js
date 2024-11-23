@@ -72,29 +72,41 @@ module.exports.deleteFoodItem= async (req, res) => {
     res.redirect("/listings");
 }
 
-module.exports.createNewFoodItem=async (req, res) => {
-    let response=geocodingClient.forwardGeocode({
-        query:req.body.foodListing.location,
-        limit:1,
-    })
-    .send();
-    console.log(response.body.features[0].geometry);
+module.exports.createNewFoodItem = async (req, res, next) => {
+    try {
+        const { location } = req.body.foodListing;
 
-    let url=req.file.path;
-    let filename=req.file.filename;
-    console.log(url,"...",filename);
-    let newFoodListing = new FoodListing(req.body.foodListing);
-    if (!req.body.foodListing) {
-        throw new ExpressError(400, "Send Valid Data");
+        if (!location) {
+            throw new ExpressError(400, "Location is required.");
+        }
+
+        const response = await geocodingClient.forwardGeocode({
+            query: location,
+            limit: 1,
+        }).send();
+
+        if (!response.body.features || response.body.features.length === 0) {
+            throw new ExpressError(400, "Location not found. Please provide a valid address.");
+        }
+
+        const geometry = response.body.features[0].geometry;
+        const url = req.file.path;
+        const filename = req.file.filename;
+
+        const newFoodListing = new FoodListing({
+            ...req.body.foodListing,
+            owner: req.user._id,
+            images: { url, filename },
+            geometry,
+        });
+
+        const savedListing = await newFoodListing.save();
+
+        req.flash("success", "New Item Created");
+        res.redirect("/listings");
+    } catch (err) {
+        next(err);
     }
-    
-    newFoodListing.owner=req.user._id;
-    newFoodListing.images={url,filename};
-    newFoodListing.geometry=response.body.features[0].geometry;
-    let savedListing=await newFoodListing.save();
-    // console.log(savedListing);
-    req.flash("success", "New Item Created");
-    res.redirect("/listings");
 };
 
 module.exports.getOffers=(req,res)=>{

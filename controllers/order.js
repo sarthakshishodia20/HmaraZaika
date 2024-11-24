@@ -6,8 +6,8 @@ const FoodListing = require("../models/listing");
 
 module.exports.orderFood=async (req, res) => {
     if (!req.isAuthenticated() || req.user.type !== "customer") {
-        req.flash("error", "You are not a customer.");
-        return res.redirect("/");
+        req.flash("error", "Unauthorised access nahi milta yahan");
+        return res.redirect("/listings");
     }
     
     const { foodId } = req.params;

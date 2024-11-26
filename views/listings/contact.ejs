@@ -10,7 +10,7 @@
 </head>
 
 <body style="background: linear-gradient(135deg, #f8c6e4, #a7b0f7);">
-    
+
     <% layout("/layouts/boilerplate") %>
     <div class="image"
         style="height: 400px; width: 100%; background: url('/uploads/contactImg.jpg') no-repeat center center; background-size: cover;">
@@ -18,7 +18,7 @@
     <p class="text-center py-5 fs-5 fw-bold">We are always happy to hear from our customers!
     </p>
     <form class="form-box bg-white py-3 px-5 mx-auto rounded" style="max-width: 600px;"
-        action="https://api.web3forms.com/submit" method="POST">
+        action="https://api.web3forms.com/submit" method="POST" id="contactForm">
         <input type="hidden" name="access_key" value="f90314ef-988b-4de8-92e8-732ea3ab9f51">
         <h3 class="text-secondary fw-bold mb-4">GET IN TOUCH</h3>
         <div class="form-group">
@@ -35,7 +35,33 @@
     </form>
     <br><br><br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            const formData = new FormData(this); // Collect form data
+
+            fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: {
+                    Accept: 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                    window.location.reload(); // Refresh the page
+                } else {
+                    alert('Something went wrong. Please try again!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
 </body>
 
 </html>

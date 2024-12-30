@@ -49,13 +49,13 @@ const store=MongoStore.create({
     mongoUrl:dbURL,
     touchAfter:24*60*60,
     crypto:{
-        secret:"mysecretKey",
+        secret:process.env.SECRET,
     }
 })
 
 const sessionOptions={
     store:store,
-    secret:"mySuperSecretCode", 
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
 }

@@ -2,7 +2,8 @@ if(!process.env.NODE_ENV!=="production"){
     require("dotenv").config();
 }
 
-console.log(process.env.secret);
+console.log(process.env.secret); // This might log undefined if the environment variable is not set
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -16,10 +17,11 @@ const LocalStrategy = require("passport-local");
 const User=require("./models/User");
 const orderRouter = require("./routes/order");
 const session=require("express-session");
+const MongoStore = require("connect-mongo");
 const flash=require("connect-flash");
 const listingRouter = require("./routes/listing");
 const reviewRouter=require("./routes/reviews");
-const  userRouter=require("./routes/users");
+const  userRouter=require("./routes/users");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -29,24 +31,43 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/uploads", express.static("uploads"));
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/Zaika_Zunction";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/Zaika_Zunction";
+const dbURL=process.env.ATLAS_DB;
+
 async function main() {
-    await mongoose.connect(MONGO_URL);
+    try {
+        await mongoose.connect(dbURL);
+        console.log("Connected to MongoDB"); 
+    } catch (error) {
+        console.error("Error connecting to MongoDB:", error);
+        process.exit(1); // Exit with an error code if connection fails
+    }
 }
 main();
 
+const store=MongoStore.create({
+    mongoUrl:dbURL,
+    touchAfter:24*60*60,
+    crypto:{
+        secret:"mysecretKey",
+    }
+})
+
 const sessionOptions={
-    secret:"mySuperSecretCode",
+    store:store,
+    secret:"mySuperSecretCode", 
     resave:false,
     saveUninitialized:true,
 }
 
+store.on("error",function(e){
+    console.log("Session Store Error",e);
+})
+
 // Root Route
 app.get("/", (req, res) => {
     res.send("Hi I am Root");
-
 });
-
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -57,15 +78,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
     res.locals.currUser=req.user;
     next();
 })
-
 
 app.get("/demouser",async(req,res)=>{
     let fakeUser=new User({
@@ -77,6 +95,7 @@ app.get("/demouser",async(req,res)=>{
     console.log(registeredUser);
     res.send(registeredUser);
 })
+
 // Use listing routes
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);

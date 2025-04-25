@@ -126,7 +126,7 @@ app.get("/testListing", async (req, res) => {
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found"));
 });
-
+// Project
 // Error handler middleware
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "Something went wrong" } = err;
